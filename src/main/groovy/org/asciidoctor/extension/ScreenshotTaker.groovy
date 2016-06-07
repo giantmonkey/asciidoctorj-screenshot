@@ -146,11 +146,11 @@ class ScreenshotTaker implements BrowserResizer {
 
         if (img.width < dim.width) {
             System.out.println("image (${img.width}x${img.height}) is slimmer than the requested screenshot (${dim.width}x${dim.height})");
-            w = img.width;
+            w = img.width - x;
         }
         if (img.height < dim.height) {
             System.out.println("image (${img.width}x${img.height}) is shorter than the requested screenshot (${dim.width}x${dim.height})");
-            h = img.height;
+            h = img.height - y;
         }
         if (w > dim.width - x) {
             System.out.println("the selected element '$selector' is wider than the screenshot");
