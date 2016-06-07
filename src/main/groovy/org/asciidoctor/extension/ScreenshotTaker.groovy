@@ -59,6 +59,8 @@ class ScreenshotTaker implements BrowserResizer {
         this.url = attributes['url']
         this.selector = attributes['selector']
 
+        System.out.println(attributes['url'] + " " + attributes['selector']);
+
         final String name = attributes['name']
         this.fileName = name ? name : uniqueName()
         this.imageFile = new File(screenshotDir, fileName + ".png")
